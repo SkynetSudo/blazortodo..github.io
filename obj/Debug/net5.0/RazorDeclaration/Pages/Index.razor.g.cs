@@ -82,6 +82,13 @@ using BlazorTodoApp.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "/home/vrsingireddy/projects/Blazor/BlazorTodoApp/Pages/Index.razor"
+using BlazorTodoApp.Models;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -91,16 +98,28 @@ using BlazorTodoApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "/home/vrsingireddy/projects/Blazor/BlazorTodoApp/Pages/Index.razor"
+#line 31 "/home/vrsingireddy/projects/Blazor/BlazorTodoApp/Pages/Index.razor"
  
     public string todoInput {get; set;}
-    public List<string> todos = new List<string>();
+    public List<Todo> todos = new List<Todo>();
 
     public void AddTodo()
     {
         //Console.WriteLine(todoInput);
-        todos.Add(todoInput);
+        var todo = new Todo();
+        todo.Title = todoInput;
+        todos.Add(todo);
         todoInput = "";
+    }
+
+    public void RemoveTodo(int index)
+    {
+        todos.RemoveAt(index);
+    }
+
+    public void MarkAsComplete(Todo todo)
+    {
+        todo.IsComplete = true;
     }
 
 #line default
