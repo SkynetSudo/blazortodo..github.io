@@ -98,7 +98,11 @@ using BlazorTodoApp.Models;
         }
         #pragma warning restore 1998
 #nullable restore
+<<<<<<< HEAD
 #line 31 "/home/vrsingireddy/projects/Blazor/BlazorTodoApp/Pages/Index.razor"
+=======
+#line 23 "/home/vrsingireddy/projects/Blazor/BlazorTodoApp/Pages/Index.razor"
+>>>>>>> Reference file
  
     public string todoInput {get; set;}
     public List<Todo> todos = new List<Todo>();
@@ -112,6 +116,7 @@ using BlazorTodoApp.Models;
         todoInput = "";
     }
 
+<<<<<<< HEAD
     public void RemoveTodo(int index)
     {
         todos.RemoveAt(index);
@@ -120,6 +125,11 @@ using BlazorTodoApp.Models;
     public void MarkAsComplete(Todo todo)
     {
         todo.IsComplete = true;
+=======
+    public void RemoveTodo()
+    {
+
+>>>>>>> Reference file
     }
 
 #line default
