@@ -1,0 +1,38 @@
+﻿@page "/"
+
+<div class="todo-container">
+    <h1>To-Do App! </h1>
+    <div class="todo-input">
+        <input type="text" @bind="todoInput" />
+        <button @onclick="AddTodo">Add</button>
+
+    </div>
+
+    @for (int 1=0; 1< todos.Count; i++)
+
+    {
+        <div class="todo-item">
+            <div class="todo-item__item">@todo</div>
+            <div class="todo-item__close" @onclick="@(() => RemoveTodo(index))">&times;</div>
+        </div>    
+        
+    }
+</div>
+
+@code
+{
+    public string todoInput {get; set;}
+    public List<string> todos = new List<string>();
+
+    public void AddTodo()
+    {
+        //Console.WriteLine(todoInput);
+        todos.Add(todoInput);
+        todoInput = "";
+    }
+
+    public void RemoveTodo()
+    {
+
+    }
+}
