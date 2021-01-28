@@ -48,6 +48,6 @@
 
     public void MarkAsComplete(Todo todo)
     {
-        todo.IsComplete = true;
+        todo.IsComplete = !todo.IsComplete;
     }
 }
