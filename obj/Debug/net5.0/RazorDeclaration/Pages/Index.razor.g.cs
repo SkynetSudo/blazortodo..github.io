@@ -119,6 +119,7 @@ using BlazorTodoApp.Models;
 
     public void MarkAsComplete(Todo todo)
     {
+        //Add and Remove mark as complete
         todo.IsComplete = !todo.IsComplete;
     }
 
